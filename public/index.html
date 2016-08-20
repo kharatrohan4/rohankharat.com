@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Rohan Kharat" />
+	<base href="/">
+
+	<title>Rohan Kharat</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+	<!-- JS -->
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-route/angular-route.min.js"></script>
+	<script src="js/modules/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/modules//move-top.js"></script>
+	<script type="text/javascript" src="js/modules/easing.js"></script>
+	<script type="text/javascript" src="libs/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+	<!-- ANGULAR CUSTOM -->
+	<script src="js/controllers/MainCtrl.js"></script>
+	<script src="js/controllers/ProfileCtrl.js"></script>
+	<script src="js/services/ProfileService.js"></script>
+
+
+	<script src="js/Travel/js/TravelCtrl.js"></script>
+
+	<script src="js/appRoutes.js"></script>
+	<script src="js/app.js"></script>
+	
+	<!-- custom js here -->
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+
+	<!--web-fonts-->
+	<link href='//fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+<body ng-app="sampleApp" ng-controller="MainController">
+	<!-- header -->
+	<div class="header show-on-scroll">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-header pull-left">
+				<a class="navbar-brand" href="/home">Home</a>
+			</div>
+			<div class="navbar-header pull-left">
+				<a class="navbar-brand" href="/">Profile</a>
+			</div>
+			<!-- <div class="navbar-header pull-left">
+				<a class="navbar-brand" href="/travel">Travel</a>
+			</div> -->
+			<div class="navbar-header pull-right">
+				<a class="navbar-brand" href="#contact">Contact</a>
+			</div>
+		</nav>
+	</div>
+	<!-- //header -->
+	<div ng-view class="view">
+
+	</div>
+	<!--contact -->
+	<div class="welcome contact" id="contact" ng-if="showContact">
+		<div class="container">
+			<h3 class="title">Contact Us</h3>
+
+			<div class="contact-row">
+				<div class="col-md-6 contact-left">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60542.7488885928!2d73.83670421573889!3d18.487200797866077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c007c7e37f75%3A0xf193a4fb3c63cc56!2sParvati+Paytha%2C+Pune%2C+Maharashtra+411009%2C+India!5e0!3m2!1sen!2sin!4v1471718519432" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-6 contact-right">
+					<div class="address-left">
+						<p>{{address.street}}<br> {{address.state}} </p>
+					</div>
+					<div class="address-right">
+						<p>Call us :  {{phone}}</p>
+						<p>E-mail : <a href="mailto:{{mail}}">{{mail}}</a></p>
+					</div>
+					<div class="clearfix"></div>
+					<div class="contact-form">
+						<form >
+							<input type="text" name="Name" placeholder="Name" required="">
+							<input class="email" name="Email" type="text" placeholder="Email" required="">
+							<input class="phone" name="phone" type="text" placeholder="Phone" required="">
+							<textarea name="Message" placeholder="Message" required=""></textarea>
+							<md-button class="md-primary md-raised center-block" ng-click="ComingSoon($event)"   >
+								Submit
+							</md-button>
+						</form>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--//contact -->
+	<!--footer-->
+	<div class="footer">
+		<div class="container">
+			<p>
+				<span class="falinks">
+					<a href="{{social.linkedin}}"><i class="fa fa-linkedin" ></i></a>
+					<a href="{{social.twitter}}"><i class="fa fa-twitter"></i></a>
+					<a href="{{social.skype}}"><i class="fa fa-skype"></i></a>
+					<a href="{{social.github}}"><i class="fa fa-github"></i></a>
+				</span>
+			</p>
+		</div>
+	</div>
+	<!--//footer-->
+</body>
+</html>
