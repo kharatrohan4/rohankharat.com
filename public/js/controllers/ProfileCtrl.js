@@ -2,10 +2,10 @@ angular.module('ProfileCtrl', ['ngSanitize']).controller('ProfileController', fu
 
 	$rootScope.showContact=true;
 	$scope.name = 'Rohan Kharat';
-	$scope.title = 'Associate SQA Engineer';
+	$scope.title = 'Assoc SQA Engineer';
 	$scope.dob = '04-05-1992';
 	$scope.phone = '+91 9579298004';
-	$scope.address = {street: '', state: 'Maharashtra'};
+	$scope.address = {street: 'Pawarwada, Parwati , Swargate', state: 'Maharashtra'};
 	$scope.mail = 'kharatrohan4@gmail.com';
 	$scope.blog = {url: 'https://rohankharat.com/blogs', title: 'Blogs [Coming soon]'};
 	$scope.social = {
