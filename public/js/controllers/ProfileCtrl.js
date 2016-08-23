@@ -16,14 +16,13 @@ angular.module('ProfileCtrl', ['ngSanitize']).controller('ProfileController', fu
 		insta:'https://www.instagram.com/kharat_rohan/'
 	};
 
-	$scope.aboutus = '<p>I am an software engineer.' +
-		' I like to learn new technologies and play around. Currently working in Medibox,' +
-		' Bangalore as Software Engineer,' +
-		' I am involved with designing and developing scalable applications,</p>' +
+	$scope.aboutus = '<p>I am an Associate SQA Engineer.' +
+		' I like to learn new technologies and play around. Currently working in Symantec,' +
+		' Pune as Assoc SQA Engineer,' +
+		' I am involved in Email Secuirity Product,</p>' +
 		'<br>' +
-		'<p>I\'ve been associated and involved with computers through out my life.' +
-		' Among other stuff, I like to play sports,' +
-		' surf blogs and articles.';
+		'<p>Currently Working On Public Cloud Migration As DevOps' +
+		' ';
 	
 
 	$scope.workInfo = [{
